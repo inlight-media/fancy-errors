@@ -1,0 +1,15 @@
+{
+  "name": "fancy-errors",
+  "version": "0.1.0",
+  "description": "Node.js developer's Swiss Army knife for those damned errors.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jshint && jasmine-node spec --verbose"
+  },
+  "author": "Daniel Regeci",
+  "license": "MIT",
+  "devDependencies": {
+    "jasmine-node": "^1.14.5",
+    "jshint": "^2.5.10"
+  }
+}
