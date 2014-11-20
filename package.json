@@ -1,6 +1,6 @@
 {
   "name": "fancy-errors",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Node.js developer's Swiss Army knife for those damned errors.",
   "main": "index.js",
   "scripts": {
