@@ -110,19 +110,31 @@ console.log(err.code); // outputs `INVALID_USERNAME`
 ## Pre-defined errors
 - `AuthenticationError(message)`
 - `ArgumentError(message)`
+- `ConflictError(message)`
+- `ConnectionError(message)`
 - `DirectoryNotFoundError(message)`
 - `FatalError(message)`
 - `FileLoadError(message)`
 - `FileNotFoundError(message)`
+- `ForbiddenError(message)`
 - `HTTPError(statusCode, statusMessage)`
 - `IOError(message)`
 - `InvalidParameterError(parameterName, message)`
 - `MissingParameterError(parameterName, message)`
+- `NotAcceptableError(message)`
+- `NotAllowedError(message)`
 - `NotFoundError(message)`
+- `PreconditionError(message)`
 - `RangeError(message)`
+- `RateLimiterError(message)`
 - `ReferenceError(message)`
+- `ResourceBusyError(message)`
+- `TimeoutError(message)`
+- `TooLargeError(message)`
 - `TypeError(message)`
+- `UnsupportedError(message)`
 - `URIError(message)`
+- `URITooLongError(message)`
 - `ValidationError(message)`
 
 ## Define your own

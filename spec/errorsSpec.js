@@ -195,3 +195,37 @@ describe('.HTTPError', function () {
     assert.equal(err.message, msg);
   });
 });
+
+describe('HTTP status codes', function () {
+  it('should return 404 for `NotFoundError`, `FileNotFoundError` and `DirectoryNotFoundError`', function () {
+    assert.equal(errors.statusCode(new errors.NotFoundError()), 404);
+    assert.equal(errors.statusCode(new errors.FileNotFoundError()), 404);
+    assert.equal(errors.statusCode(new errors.DirectoryNotFoundError()), 404);
+  });
+
+  it('should return 401 for `AuthenticationError`', function () {
+    assert.equal(errors.statusCode(new errors.AuthenticationError()), 401);
+  });
+  
+  it('should return 500 for `FatalError`', function () {
+    assert.equal(errors.statusCode(new errors.FatalError()), 500);
+  });
+  
+  it('should return 500 for `SomeCustomError`', function () {
+    assert.equal(errors.statusCode(new errors.NamedError('SomeCustomError')), 500);
+  });
+});
+
+describe('.serialize()', function () {
+  it('should return serialized error object', function(){
+    var err = new errors.NotFoundError('File not found'),
+        obj;
+    
+    assert(err.serialize, '.serialize() is not defined');
+    
+    obj = err.serialize();
+    
+    assert.equal(obj.error, 'File not found');
+    assert.equal(obj.error_name, 'NotFoundError');
+  });
+});

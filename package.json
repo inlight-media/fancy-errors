@@ -1,6 +1,6 @@
 {
   "name": "fancy-errors",
-  "version": "0.1.2",
+  "version": "0.1.1",
   "description": "Node.js developer's Swiss Army knife for those damned errors.",
   "main": "index.js",
   "scripts": {
@@ -8,8 +8,13 @@
   },
   "author": "Daniel Regeci",
   "license": "MIT",
+  "homepage": "https://github.com/getc/fancy-errors",
   "devDependencies": {
     "jasmine-node": "^1.14.5",
     "jshint": "^2.5.10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/getc/fancy-errors.git"
   }
 }
