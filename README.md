@@ -248,6 +248,28 @@ FatalError: Reading data failed
  ←  Error: ENOENT, stat '/file/nonexistent' (no such file or directory)
  ...
 ```
+
+## .statusCode(err)
+
+This helper function returns a HTTP status code for the given error.
+
+```js
+errors.statusCode(new errors.NotFoundError()); // returns 404
+```
+
+## err.serialize()
+
+Returns simple object represenatation of the error usually used for logging or for the server response.
+
+```js
+new errors.NotFoundError('File /file/nonexistent not found').serialize();
+
+{
+  "error": "File /file/nonexistent not found",
+  "error_name": "NotFoundError",
+  "error_code": undefined
+}
+```
   
 ## Pretty stack
 
