@@ -257,12 +257,12 @@ This helper function returns a HTTP status code for the given error.
 errors.statusCode(new errors.NotFoundError()); // returns 404
 ```
 
-## err.serialize()
+## .serialize()
 
 Returns simple object represenatation of the error usually used for logging or for the server response.
 
 ```js
-new errors.NotFoundError('File /file/nonexistent not found').serialize();
+errors.serialize(new errors.NotFoundError('File /file/nonexistent not found'));
 
 {
   "error": "File /file/nonexistent not found",
