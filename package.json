@@ -4,17 +4,18 @@
   "description": "Node.js developer's Swiss Army knife for those damned errors.",
   "main": "index.js",
   "scripts": {
-    "test": "jshint && jasmine-node spec --verbose"
+    "test": "jshint && jasmine-node spec --verbose",
+    "lint": "eslint index.js lib/*"
   },
   "author": "Daniel Regeci",
   "license": "MIT",
-  "homepage": "https://github.com/getc/fancy-errors",
+  "homepage": "https://github.com/ovx/fancy-errors",
   "devDependencies": {
     "jasmine-node": "^1.14.5",
     "jshint": "^2.5.10"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/getc/fancy-errors.git"
+    "url": "git://github.com/ovx/fancy-errors.git"
   }
 }

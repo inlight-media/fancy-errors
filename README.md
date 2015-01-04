@@ -207,6 +207,15 @@ if(err){
 }
 ```
 
+## .catchName
+
+Similator to `.catch` but accepts the name of the error as the first argument and will catch ONLY errors that match the name.
+
+```js
+if(!errors.catchName('FatalError', err)){
+  // all other errors except FatalError will not be catched
+}
+```
 
 ## .log
 
@@ -257,6 +266,16 @@ This helper function returns a HTTP status code for the given error.
 errors.statusCode(new errors.NotFoundError()); // returns 404
 ```
 
+## .logLevel(err)
+
+Returns a log level ('fatal', 'warning' or 'debug') for pre-defined errors.
+
+```js
+errors.logLevel(new errors.NotFoundError()); // returns 'warning'
+errors.logLevel(new errors.FatalError()); // returns 'fatal'
+errors.logLevel(new errors.Error()); // returns 'debug'
+```
+
 ## .serialize()
 
 Returns simple object represenatation of the error usually used for logging or for the server response.
@@ -266,8 +285,8 @@ errors.serialize(new errors.NotFoundError('File /file/nonexistent not found'));
 
 {
   "error": "File /file/nonexistent not found",
-  "error_name": "NotFoundError",
-  "error_code": undefined
+  "errorName": "NotFoundError",
+  "errorCode": undefined
 }
 ```
   
